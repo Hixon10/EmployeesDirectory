@@ -15,8 +15,13 @@
 
     <style>
         .grid {
-            width: 1000px;
+            width: 850px;
             height: 400px;
+        }
+
+        #MainCtrl {
+            width: 850px;
+            margin: 100px auto 0 auto;
         }
 
         .header-filtered {
@@ -25,14 +30,7 @@
     </style>
 </head>
 <body>
-<div ng-controller="MainCtrl">
-    You can use asterisks to fuzz-match, i.e. use "*z*" as your filter to show any row where that column contains a "z".
-    <br>
-    <br>
-    <strong>Note:</strong> The third column has the filter input disabled, but actually has a filter set in code that requires every company to have an 'a' in their name.
-    <br>
-    <br>
-    <button id='toggleFiltering' ng-click="toggleFiltering()" class="btn btn-success">Toggle Filtering</button>
+<div ng-controller="MainCtrl" id="MainCtrl">
     <div id="grid1" ui-grid="gridOptions" class="grid"></div>
 </div>
 </body>
