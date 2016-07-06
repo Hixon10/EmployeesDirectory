@@ -59,16 +59,12 @@ app.controller('MainCtrl', ['$scope', '$http', 'uiGridConstants', function ($sco
         ]
     };
 
-    //https://cdn.rawgit.com/angular-ui/ui-grid.info/gh-pages/data/500_complex.json
     $http.get('http://localhost:8080/employees')
         .success(function(data) {
             $scope.gridOptions.data = data;
 
             data.forEach( function convertDates( row, index ){
                 row.createdDate = row.createdDate[2] + "." + row.createdDate[1] + "." + row.createdDate[0];
-                // row.mixedDate = new Date();
-                // row.mixedDate.setDate(today.getDate() + ( index % 14 ) );
-                // row.gender = row.gender==='male' ? '1' : '2';
             });
         });
 }]);

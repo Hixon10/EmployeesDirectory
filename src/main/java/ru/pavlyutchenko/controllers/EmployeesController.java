@@ -9,8 +9,6 @@ import ru.pavlyutchenko.service.EmployeeRepository;
 
 import java.util.List;
 
-import static java.util.stream.Collectors.toList;
-
 @RestController
 @RequestMapping("/")
 public class EmployeesController {

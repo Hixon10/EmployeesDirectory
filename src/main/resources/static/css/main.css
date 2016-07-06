@@ -1,0 +1,13 @@
+.grid {
+    width: 850px;
+    height: 400px;
+}
+
+#MainCtrl {
+    width: 850px;
+    margin: 100px auto 0 auto;
+}
+
+.header-filtered {
+    color: blue;
+}
