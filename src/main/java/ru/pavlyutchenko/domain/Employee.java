@@ -1,5 +1,9 @@
 package ru.pavlyutchenko.domain;
 
+
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -64,6 +68,7 @@ public class Employee {
         return middleName;
     }
 
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
     public LocalDateTime getCreatedDate() {
         return createdDate;
     }
@@ -75,4 +80,5 @@ public class Employee {
     public Long getId() {
         return id;
     }
+
 }

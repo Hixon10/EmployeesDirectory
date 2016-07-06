@@ -9,14 +9,16 @@ import ru.pavlyutchenko.service.EmployeeRepository;
 
 import java.util.List;
 
+import static java.util.stream.Collectors.toList;
+
 @RestController
-@RequestMapping("/employees")
+@RequestMapping("/")
 public class EmployeesController {
 
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/employees", method = RequestMethod.GET)
     public List<Employee> getAllEmployees() {
         return employeeRepository.findAll();
     }
